@@ -8,7 +8,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@libs/react-hooks": "file:../../libs/react-hooks",
     "@linaria/babel-preset": "^3.0.0-beta.15",
     "@linaria/core": "^3.0.0-beta.15",
     "@linaria/react": "^3.0.0-beta.15",
