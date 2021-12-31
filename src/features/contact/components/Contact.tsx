@@ -2,7 +2,7 @@ import { Divider } from '../../../shared/components';
 
 export const Contact = () => {
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="row">
         <h1 className="text-center text-uppercase">Contact Me</h1>
       </div>

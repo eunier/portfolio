@@ -8,7 +8,7 @@ export type LayoutProps = {
 
 const styles = {
   spacer: css`
-    height: 1rem;
+    height: 5rem;
   `,
 };
 
