@@ -8,7 +8,7 @@ export type ProjectCardProps = Pick<Project, 'icon' | 'title'> & {
 
 const styles = {
   icon: css`
-    font-size: 12rem;
+    font-size: 8rem;
   `,
   titleH5: css`
     height: 3rem;
