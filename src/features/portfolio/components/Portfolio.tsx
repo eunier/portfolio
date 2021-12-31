@@ -86,7 +86,7 @@ export const Portfolio = () => {
         <div className="row">
           {projects.map((p, idx) => (
             <div
-              className="col-md-4 col-sm-6 gx-4 gy-4"
+              className="col-lg-4 col-md-6 gx-4 gy-4"
               key={idx}
               data-bs-toggle="modal"
               data-bs-target="#projectModal"
