@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "postbuild": "purgecss --css dist/assets/*.css --content dist/index.html dist/assets/*.js --output dist/assets",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@libs/react-hooks": "file:../../libs/react-hooks",
+    "@linaria/babel-preset": "^3.0.0-beta.15",
+    "@linaria/core": "^3.0.0-beta.15",
+    "@linaria/react": "^3.0.0-beta.15",
+    "@linaria/shaker": "^3.0.0-beta.15",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.6.1",
+    "classnames": "^2.3.1",
+    "ramda": "^0.27.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@types/bootstrap": "^5.1.6",
+    "@types/classnames": "^2.3.1",
+    "@types/ramda": "^0.27.45",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "sass": "^1.43.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-linaria": "^1.0.0"
+  }
+}
