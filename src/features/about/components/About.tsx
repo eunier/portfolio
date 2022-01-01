@@ -1,4 +1,9 @@
+import { css } from 'css-zero';
 import { Divider } from '../../../shared/components';
+
+const blue = css`
+  color: blue;
+`;
 
 export const About = (): JSX.Element => {
   return (

@@ -23,7 +23,9 @@ specifiers:
   sass: ^1.43.2
   typescript: ^4.3.2
   vite: ^2.6.4
+  vite-plugin-babel-macros: ^1.0.5
   vite-plugin-linaria: ^1.0.0
+  vite-plugin-macro: ^0.2.0
 
 dependencies:
   '@linaria/babel-preset': 3.0.0-beta.15
@@ -50,7 +52,9 @@ devDependencies:
   sass: 1.45.2
   typescript: 4.5.4
   vite: 2.7.10_sass@1.45.2
+  vite-plugin-babel-macros: 1.0.5_vite@2.7.10
   vite-plugin-linaria: 1.0.0_vite@2.7.10
+  vite-plugin-macro: 0.2.0_vite@2.7.10
 
 packages:
 
@@ -1015,6 +1019,16 @@ packages:
 
   /@babel/plugin-syntax-top-level-await/7.14.5_@babel+core@7.16.7:
     resolution: {integrity: sha512-hx++upLv5U1rgYfwe1xBQUhRmU41NEvpUvrp8jkrSCdvGSnM5/qdRMtylJ6PG5OFkBaHkbTAKTnd3/YyESRHFw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.16.7
+      '@babel/helper-plugin-utils': 7.16.7
+    dev: true
+
+  /@babel/plugin-syntax-typescript/7.16.7_@babel+core@7.16.7:
+    resolution: {integrity: sha512-YhUIJHHGkqPgEcMYkPCKTyGUdoGKWtopIycQyjJH8OjvRgOYsXsaKehLVPScKJWAULPxMa4N1vCe6szREFlZ7A==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2170,6 +2184,35 @@ packages:
       picomatch: 2.3.0
     dev: true
 
+  /@types/babel__core/7.1.18:
+    resolution: {integrity: sha512-S7unDjm/C7z2A2R9NzfKCK1I+BAALDtxEmsJBwlB3EzNfb929ykjL++1CK9LO++EIp2fQrC8O+BwjKvz6UeDyQ==}
+    dependencies:
+      '@babel/parser': 7.16.7
+      '@babel/types': 7.16.7
+      '@types/babel__generator': 7.6.4
+      '@types/babel__template': 7.4.1
+      '@types/babel__traverse': 7.14.2
+    dev: true
+
+  /@types/babel__generator/7.6.4:
+    resolution: {integrity: sha512-tFkciB9j2K755yrTALxD44McOrk+gfpIpvC3sxHjRawj6PfnQxrse4Clq5y/Rq+G3mrBurMax/lG8Qn2t9mSsg==}
+    dependencies:
+      '@babel/types': 7.16.7
+    dev: true
+
+  /@types/babel__template/7.4.1:
+    resolution: {integrity: sha512-azBFKemX6kMg5Io+/rdGT0dkGreboUVR0Cdm3fz9QJWpaQGJRQXl7C+6hOTCZcMll7KFyEQpgbYI2lHdsS4U7g==}
+    dependencies:
+      '@babel/parser': 7.16.7
+      '@babel/types': 7.16.7
+    dev: true
+
+  /@types/babel__traverse/7.14.2:
+    resolution: {integrity: sha512-K2waXdXBi2302XUdcHcR1jCeU0LL4TD9HRs/gk0N2Xvrht+G/BfJa4QObBQZfhMdxiCpV3COl5Nfq4uKTeTnJA==}
+    dependencies:
+      '@babel/types': 7.16.7
+    dev: true
+
   /@types/bootstrap/5.1.7:
     resolution: {integrity: sha512-CNRN73xaUuotNHfy1jFbBj+7pfXs918G4+P3HhlgKSqPPYw1SkVUkITMVNIxSDW7BzrpkC9jeuL0DZbvaXk6Lg==}
     dependencies:
@@ -2277,6 +2320,15 @@ packages:
     dependencies:
       '@babel/runtime': 7.16.7
       cosmiconfig: 6.0.0
+      resolve: 1.20.0
+    dev: true
+
+  /babel-plugin-macros/3.1.0:
+    resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
+    engines: {node: '>=10', npm: '>=6'}
+    dependencies:
+      '@babel/runtime': 7.16.7
+      cosmiconfig: 7.0.1
       resolve: 1.20.0
     dev: true
 
@@ -2496,6 +2548,17 @@ packages:
   /cosmiconfig/6.0.0:
     resolution: {integrity: sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==}
     engines: {node: '>=8'}
+    dependencies:
+      '@types/parse-json': 4.0.0
+      import-fresh: 3.3.0
+      parse-json: 5.2.0
+      path-type: 4.0.0
+      yaml: 1.10.2
+    dev: true
+
+  /cosmiconfig/7.0.1:
+    resolution: {integrity: sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==}
+    engines: {node: '>=10'}
     dependencies:
       '@types/parse-json': 4.0.0
       import-fresh: 3.3.0
@@ -3293,6 +3356,22 @@ packages:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
 
+  /vite-plugin-babel-macros/1.0.5_vite@2.7.10:
+    resolution: {integrity: sha512-QPPeIIiu1y6C9T0pG8gkOSuE5ukQ1o4AIaYGm9b8yFsk7C4T4wLmzxpXrVYMMWGmZ0ul5ZaNP+NY9+ROGMDiVw==}
+    peerDependencies:
+      vite: '>=2'
+    dependencies:
+      '@babel/core': 7.16.7
+      '@babel/plugin-syntax-jsx': 7.16.7_@babel+core@7.16.7
+      '@babel/plugin-syntax-typescript': 7.16.7_@babel+core@7.16.7
+      '@types/babel__core': 7.1.18
+      babel-plugin-macros: 3.1.0
+      tslib: 2.3.1
+      vite: 2.7.10_sass@1.45.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /vite-plugin-linaria/1.0.0_vite@2.7.10:
     resolution: {integrity: sha512-R3qnF1qAydqL2SiJQxen0b14GtOLcotxI6QHAl4+dpc8o817yX71pkvR5sJ6GAieyAqq5JOcfB3yts2tgGKFIA==}
     peerDependencies:
@@ -3303,6 +3382,25 @@ packages:
       '@linaria/babel-preset': 3.0.0-beta.15_@babel+core@7.16.7
       '@linaria/shaker': 3.0.0-beta.15_@babel+core@7.16.7
       '@rollup/pluginutils': 4.1.2
+      vite: 2.7.10_sass@1.45.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /vite-plugin-macro/0.2.0_vite@2.7.10:
+    resolution: {integrity: sha512-Sef9irfNqBiXSCjH6O0z7FSMsaGnmcIlKJF5LoFf3BtUDlvnC1+S7za2Bso6Gj9Rf3hxxZCJn3iaktS2iOKQQA==}
+    peerDependencies:
+      vite: ^2
+    dependencies:
+      '@babel/generator': 7.16.7
+      '@babel/parser': 7.16.7
+      '@babel/template': 7.16.7
+      '@babel/traverse': 7.16.7
+      '@babel/types': 7.16.7
+      '@types/babel__generator': 7.6.4
+      '@types/babel__template': 7.4.1
+      '@types/babel__traverse': 7.14.2
+      picomatch: 2.3.0
       vite: 2.7.10_sass@1.45.2
     transitivePeerDependencies:
       - supports-color
