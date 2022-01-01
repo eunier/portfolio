@@ -1,6 +1,14 @@
+import { css } from 'cssed/macro';
 import { Divider } from '../../../shared/components';
 
-
+const styles = css`
+  .red {
+    background-color: red;
+  }
+  .blue {
+    background-color: blue;
+  }
+`;
 
 export const About = (): JSX.Element => {
   return (
@@ -25,7 +33,7 @@ export const About = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div>test</div>
+      <div className={styles.red}>test</div>
     </div>
   );
 };
