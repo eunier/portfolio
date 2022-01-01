@@ -14,7 +14,7 @@ export const Navbar = () => {
     >
       <div className="container-fluid">
         <button
-          className="navbar-toggler ms-auto"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
