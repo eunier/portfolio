@@ -8,7 +8,7 @@ const styles = css`
   .blue {
     background-color: blue;
   }
-`;
+` as { red: string; blue: string };
 
 export const About = (): JSX.Element => {
   return (
