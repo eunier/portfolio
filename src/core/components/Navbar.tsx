@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import { useState } from 'react';
 
+const navLinkNames = ['home', 'portfolio', 'about', 'contact'];
+
 export const Navbar = () => {
-  const navLinkNames = ['home', 'portfolio', 'about', 'contact'];
   const [activeNavLink, setActiveNavLink] = useState(navLinkNames[0]);
 
   return (
