@@ -1,5 +1,7 @@
 import { Divider } from '../../../shared/components';
 
+
+
 export const About = (): JSX.Element => {
   return (
     <div className="container">
@@ -23,6 +25,7 @@ export const About = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <div>test</div>
     </div>
   );
 };
