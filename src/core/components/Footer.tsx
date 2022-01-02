@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const Copyright = () => {
+export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (

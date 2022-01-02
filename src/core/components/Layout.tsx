@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { Children, ReactNode } from 'react';
-import { Copyright, Navbar } from '.';
+import { Footer, Navbar } from '.';
 
 export type LayoutProps = {
   children?: ReactNode;
@@ -24,7 +24,7 @@ export const Layout = (props: LayoutProps) => {
         </>
       ))}
 
-      <Copyright />
+      <Footer />
     </>
   );
 };
