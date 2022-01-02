@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+import classNames from 'classnames';
 import { useState } from 'react';
 
 type SocialLink = {
@@ -8,8 +9,15 @@ type SocialLink = {
 };
 
 const styles = {
-  footer_socialLinks: css`
+  footer__socialLinks: css`
     column-gap: 1.5rem;
+  `,
+  footer_socialLinkBtn: css`
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
   `,
 };
 
@@ -39,9 +47,14 @@ export const Footer = () => {
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>On The Web</h2>
 
-          <div className={`d-flex gx-5 mx-auto ${styles.footer_socialLinks}`}>
+          <div className={`d-flex gx-5 mx-auto ${styles.footer__socialLinks}`}>
             {socialLinks.map(sl => (
-              <a className="btn btn-outline-light">
+              <a
+                className={classNames(
+                  'btn btn-outline-light',
+                  styles.footer_socialLinkBtn
+                )}
+              >
                 <i className={`bi ${sl.icons} fs-1`}></i>
               </a>
             ))}
