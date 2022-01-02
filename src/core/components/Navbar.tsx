@@ -13,20 +13,20 @@ const navLinkNames: NavLink[] = [
   },
   {
     name: 'portfolio',
-    icon: 'bi-house',
+    icon: 'bi-briefcase',
   },
   {
     name: 'about',
-    icon: 'bi-house',
+    icon: 'bi-file-person',
   },
   {
     name: 'contact',
-    icon: 'bi-house',
+    icon: 'bi-envelope',
   },
 ];
 
 export const Navbar = () => {
-  const [activeNavLinkIdx, setActiveNavLinkIdx] = useState(navLinkNames[0]);
+  const [activeNavLinkIdx, setActiveNavLinkIdx] = useState(0);
 
   return (
     <nav
@@ -53,14 +53,13 @@ export const Navbar = () => {
               <li key={idx} className="nav-item">
                 <a
                   className={classNames('nav-link mx-1 px-2', {
-                    active: el.name === activeNavLinkIdx.name,
+                    active: idx === activeNavLinkIdx,
                   })}
                   href={`#${el.name}`}
-                  onClick={() => setActiveNavLinkIdx(el)}
-                  aria-current={
-                    el.name === activeNavLinkIdx.name ? 'page' : undefined
-                  }
+                  onClick={() => setActiveNavLinkIdx(idx)}
+                  aria-current={idx === activeNavLinkIdx ? 'page' : undefined}
                 >
+                  <i className={`bi ${el.icon} pe-2`}></i>
                   {el.name}
                 </a>
               </li>
