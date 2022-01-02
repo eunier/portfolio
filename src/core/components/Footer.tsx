@@ -49,20 +49,20 @@ const footer = css`
 const FooterStyles = styled.div`
   .footer {
     &__social-links {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      column-gap: 1.5rem;
       display: flex;
       justify-content: center;
-      column-gap: 1.5rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     &__socialLink-btn {
-      width: 4.5rem;
-      height: 4.5rem;
-      border-width: 0.2rem;
       border-radius: 100%;
+      border-width: 0.2rem;
       display: grid;
+      height: 4.5rem;
       place-items: center;
+      width: 4.5rem;
     }
 
     &__social-link-icon {
@@ -70,9 +70,9 @@ const FooterStyles = styled.div`
     }
 
     &__copy-right {
-      text-align: center;
-      margin-top: 0.5rem;
       margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      text-align: center;
     }
   }
 `;
@@ -96,7 +96,7 @@ export const Footer = () => {
                 className="btn btn-outline-light footer__socialLink-btn"
                 key={idx}
               >
-                <i className={`bi ${sl.icons} footer__social-link-icon`}></i>
+                <i className={`footer__social-link-icon bi ${sl.icons}`}></i>
               </a>
             ))}
           </div>
@@ -105,7 +105,7 @@ export const Footer = () => {
 
       <div className="row bg-secondary">
         <div className="col">
-          <div className="text-white footer__copy-right">
+          <div className="footer__copy-right text-center">
             &copy; {year} Yunier Alvarez Portfolio
           </div>
         </div>
