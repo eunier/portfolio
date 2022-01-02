@@ -7,6 +7,22 @@ type SocialLink = {
   icons: string;
 };
 
+export type FilterFlags<TBase, TCondition> = {
+  [key in keyof TBase]: TBase[key] extends TCondition ? key : never;
+};
+
+export type AllowedKeys<TBase, TCondition> = FilterFlags<
+  TBase,
+  TCondition
+>[keyof TBase];
+
+const varToString = (args: { varKey: string }): string => Object.keys(args)[0];
+
+const stylesClassNames = {
+  footer__socialLinks: 'footer__socialLinks',
+};
+stylesClassNames.footer__socialLinks;
+
 const styles = {
   footer__socialLinks: css`
     column-gap: 1.5rem;
