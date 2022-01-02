@@ -7,7 +7,7 @@ export const Copyright = () => {
     <div className="container-fluid bg-secondary">
       <div className="row">
         <div className="col">
-          <p className="text-center mt-2 mb-2">
+          <p className="text-center text-white mt-2 mb-2">
             &copy; {year} Yunier Alvarez Portfolio
           </p>
         </div>
