@@ -65,6 +65,10 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          <hr className="d-md-none text-white-50" />
+
+          <div>test</div>
         </div>
       </div>
     </nav>
