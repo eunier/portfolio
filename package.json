@@ -14,7 +14,8 @@
     "classnames": "^2.3.1",
     "ramda": "^0.27.1",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "utils": "github:eunier/utils"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
