@@ -1,7 +1,5 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useState } from 'react';
-import './Footer.module.css';
 
 type SocialLink = {
   name: string;
@@ -21,31 +19,6 @@ const socialLinks: SocialLink[] = [
     icons: 'bi-linkedin',
   },
 ];
-
-const footer = css`
-  .footer {
-    &__social-links {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: center;
-      column-gap: 1.5rem;
-    }
-
-    &__socialLink-btn {
-      width: 4.5rem;
-      height: 4.5rem;
-      border-width: 0.2rem;
-      border-radius: 100%;
-      display: grid;
-      place-items: center;
-    }
-
-    &__social-link-icon {
-      font-size: 2rem;
-    }
-  }
-`;
 
 const FooterStyles = styled.div`
   .footer {

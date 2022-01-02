@@ -1,4 +1,4 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 import { Children, ReactNode } from 'react';
 import { Footer, Navbar } from '.';
 
@@ -6,11 +6,9 @@ export type LayoutProps = {
   children?: ReactNode;
 };
 
-const styles = {
-  spacer: css`
-    height: 5rem;
-  `,
-};
+const Spacer = styled.div`
+  height: 5rem;
+`;
 
 export const Layout = (props: LayoutProps) => {
   return (
@@ -20,7 +18,7 @@ export const Layout = (props: LayoutProps) => {
       {Children.map(props.children, child => (
         <>
           {child}
-          <div className={styles.spacer}></div>
+          <Spacer />
         </>
       ))}
 
