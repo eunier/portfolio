@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import './Footer.module.css';
 
 type SocialLink = {
   name: string;
