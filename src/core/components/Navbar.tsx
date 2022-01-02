@@ -6,6 +6,12 @@ type NavLink = {
   icon: string;
 };
 
+type SocialLink = {
+  name: string;
+  url: string;
+  icons: string;
+};
+
 const navLinkNames: NavLink[] = [
   {
     name: 'home',
@@ -22,6 +28,19 @@ const navLinkNames: NavLink[] = [
   {
     name: 'contact',
     icon: 'bi-envelope',
+  },
+];
+
+const socialLinks: SocialLink[] = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/eunier',
+    icons: 'bi-github',
+  },
+  {
+    name: 'LinkedIn',
+    url: '',
+    icons: 'bi-linkedin',
   },
 ];
 
@@ -68,7 +87,7 @@ export const Navbar = () => {
 
           <hr className="d-md-none text-white-50" />
 
-          <div>test</div>
+          <div className="navbar-nav f"></div>
         </div>
       </div>
     </nav>
