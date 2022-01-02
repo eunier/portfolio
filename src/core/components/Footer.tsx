@@ -23,18 +23,18 @@ export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <div className="container-fluid bg-secondary">
-      <div className="row text-center text-white">
-        <div className="col-lg-6 col-md-12">
+    <div className="container-fluid ">
+      <div className="row text-center text-white bg-secondary bg-opacity-75">
+        <div className="col-lg-6 col-md-12 mt-4">
           <h2>Location</h2>
         </div>
 
-        <div className="col-lg-6 col-md-12">
+        <div className="col-lg-6 col-md-12 mt-4">
           <h2>On The Web</h2>
         </div>
       </div>
 
-      <div className="row">
+      <div className="row bg-secondary">
         <div className="col">
           <p className="text-center text-white mt-2 mb-2">
             &copy; {year} Yunier Alvarez Portfolio
