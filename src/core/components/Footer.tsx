@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 import React, { useState } from 'react';
 
 type SocialLink = {
@@ -20,9 +21,9 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-const styles = css`
+const footer = css`
   .footer {
-    &__socialLinks {
+    &__social-links {
       margin-top: 2rem;
       margin-bottom: 2rem;
       display: flex;
@@ -30,7 +31,7 @@ const styles = css`
       column-gap: 1.5rem;
     }
 
-    &__socialLinkBtn {
+    &__socialLink-btn {
       width: 4.5rem;
       height: 4.5rem;
       border-width: 0.2rem;
@@ -39,8 +40,39 @@ const styles = css`
       place-items: center;
     }
 
-    &__socialLinkIcon {
+    &__social-link-icon {
       font-size: 2rem;
+    }
+  }
+`;
+
+const FooterStyles = styled.div`
+  .footer {
+    &__social-links {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      column-gap: 1.5rem;
+    }
+
+    &__socialLink-btn {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-width: 0.2rem;
+      border-radius: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    &__social-link-icon {
+      font-size: 2rem;
+    }
+
+    &__copy-right {
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 `;
@@ -49,7 +81,7 @@ export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <div className={`container-fluid ${styles}`}>
+    <FooterStyles className="container-fluid">
       <div className="row text-center text-white bg-secondary bg-opacity-75">
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>Location</h2>
@@ -58,13 +90,13 @@ export const Footer = () => {
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>On The Web</h2>
 
-          <div className="footer__socialLinks">
+          <div className="footer__social-links">
             {socialLinks.map((sl, idx) => (
               <a
-                className="btn btn-outline-light footer__socialLinkBtn"
+                className="btn btn-outline-light footer__socialLink-btn"
                 key={idx}
               >
-                <i className={`bi ${sl.icons} footer__socialLinkIcon`}></i>
+                <i className={`bi ${sl.icons} footer__social-link-icon`}></i>
               </a>
             ))}
           </div>
@@ -73,11 +105,11 @@ export const Footer = () => {
 
       <div className="row bg-secondary">
         <div className="col">
-          <div className="text-center text-white mt-2 mb-2">
+          <div className="text-white footer__copy-right">
             &copy; {year} Yunier Alvarez Portfolio
           </div>
         </div>
       </div>
-    </div>
+    </FooterStyles>
   );
 };
