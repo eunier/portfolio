@@ -7,6 +7,19 @@ type SocialLink = {
   icons: string;
 };
 
+const socialLinks: SocialLink[] = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/eunier',
+    icons: 'bi-github',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'www.linkedin.com/in/yunieralvarez',
+    icons: 'bi-linkedin',
+  },
+];
+
 const styles = css`
   .footer {
     &__socialLinks {
@@ -23,19 +36,6 @@ const styles = css`
     }
   }
 `;
-
-const socialLinks: SocialLink[] = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/eunier',
-    icons: 'bi-github',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'www.linkedin.com/in/yunieralvarez',
-    icons: 'bi-linkedin',
-  },
-];
 
 export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
