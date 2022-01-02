@@ -1,9 +1,32 @@
 import classNames from 'classnames';
 import { useState } from 'react';
 
+type NavLink = {
+  name: string;
+  icon: string;
+};
+
+const navLinkNames: NavLink[] = [
+  {
+    name: 'home',
+    icon: 'bi-house',
+  },
+  {
+    name: 'portfolio',
+    icon: 'bi-house',
+  },
+  {
+    name: 'about',
+    icon: 'bi-house',
+  },
+  {
+    name: 'contact',
+    icon: 'bi-house',
+  },
+];
+
 export const Navbar = () => {
-  const navLinkNames = ['home', 'portfolio', 'about', 'contact'];
-  const [activeNavLink, setActiveNavLink] = useState(navLinkNames[0]);
+  const [activeNavLinkIdx, setActiveNavLinkIdx] = useState(navLinkNames[0]);
 
   return (
     <nav
@@ -30,13 +53,15 @@ export const Navbar = () => {
               <li key={idx} className="nav-item">
                 <a
                   className={classNames('nav-link mx-1 px-2', {
-                    active: el === activeNavLink,
+                    active: el.name === activeNavLinkIdx.name,
                   })}
-                  href={`#${el}`}
-                  onClick={() => setActiveNavLink(el)}
-                  aria-current={el === activeNavLink ? 'page' : undefined}
+                  href={`#${el.name}`}
+                  onClick={() => setActiveNavLinkIdx(el)}
+                  aria-current={
+                    el.name === activeNavLinkIdx.name ? 'page' : undefined
+                  }
                 >
-                  {el}
+                  {el.name}
                 </a>
               </li>
             ))}
