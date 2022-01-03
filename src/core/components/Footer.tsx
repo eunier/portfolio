@@ -15,7 +15,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'www.linkedin.com/in/yunieralvarez',
+    url: 'https://linkedin.com/in/yunieralvarez',
     icons: 'bi-linkedin',
   },
 ];
@@ -59,6 +59,8 @@ export const Footer = () => {
       <div className="row text-center text-white bg-secondary bg-opacity-75">
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>Location</h2>
+
+          <p>Miami-Fort Lauderdale Area, USA, Florida</p>
         </div>
 
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
