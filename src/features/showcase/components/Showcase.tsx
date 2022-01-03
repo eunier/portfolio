@@ -1,23 +1,25 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 import classNames from 'classnames';
 import avatar from '../../../assets/avatar.png';
 import { Divider } from '../../../shared/components';
 
-const styles = {
-  wrapper: css`
-    height: 50rem;
-  `,
-  avatar: css`
-    height: 20rem;
-  `,
-  name: css`
-    font-size: 4rem;
-  `,
-};
+const ShowcaseStyles = styled.div`
+  height: 50rem;
+
+  .showcase {
+    &__avatar {
+      height: 20rem;
+    }
+
+    &__name {
+      font-size: 4rem;
+    }
+  }
+`;
 
 export const Showcase = () => {
   return (
-    <div className={styles.wrapper}>
+    <ShowcaseStyles>
       <div
         className={classNames(
           'd-flex flex-column justify-content-center align-items-center',
@@ -25,14 +27,10 @@ export const Showcase = () => {
         )}
       >
         <div>
-          <img
-            className={classNames(styles.avatar, 'rounded')}
-            src={avatar}
-            alt="avatar"
-          />
+          <img className="showcase__avatar rounded" src={avatar} alt="avatar" />
         </div>
 
-        <h1 className={classNames(styles.name, 'fw-bold text-uppercase')}>
+        <h1 className="showcase__name fw-bold text-uppercase">
           Yunier Alvarez
         </h1>
 
@@ -40,6 +38,6 @@ export const Showcase = () => {
 
         <h3>Software Developer</h3>
       </div>
-    </div>
+    </ShowcaseStyles>
   );
 };
