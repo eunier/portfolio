@@ -1,24 +1,6 @@
 import { styled } from '@linaria/react';
 import { useState } from 'react';
-
-type SocialLink = {
-  name: string;
-  url: string;
-  icons: string;
-};
-
-const socialLinks: SocialLink[] = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/eunier',
-    icons: 'bi-github',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com/in/yunieralvarez',
-    icons: 'bi-linkedin',
-  },
-];
+import { socialLinks } from '../../data';
 
 const FooterStyles = styled.div`
   .footer {
