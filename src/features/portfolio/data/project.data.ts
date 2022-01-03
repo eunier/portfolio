@@ -3,6 +3,7 @@ import devopsDashboardImage from '../../../assets/devops-dashboard.png';
 import randomPasswordGeneratorImage from '../../../assets/random-password-generator.png';
 import socialNetworkImage from '../../../assets/social-network.jpg';
 import weatherAppImage from '../../../assets/weather-app.png';
+import { Project } from '../models';
 
 export const projects: Project[] = [
   {

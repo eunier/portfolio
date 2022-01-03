@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useState } from 'react';
-import { socialLinks } from '../../data';
+import { socialLinks } from '../data';
 
 const FooterStyles = styled.div`
   .footer {
