@@ -69,6 +69,8 @@ export const Footer = () => {
               <a
                 className="btn btn-outline-light footer__socialLink-btn"
                 key={idx}
+                href={sl.url}
+                target="_blank"
               >
                 <i className={`footer__social-link-icon bi ${sl.icons}`}></i>
               </a>
