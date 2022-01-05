@@ -70,12 +70,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .test {
-          background-color: red;
-        }
-      `}</style>
     </FooterStyles>
   );
 };
