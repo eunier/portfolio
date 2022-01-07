@@ -65,7 +65,7 @@ export const Footer = () => {
 
       <div className="row bg-secondary">
         <div className="col">
-          <div className="footer__copy-right text-center">
+          <div className="footer__copy-right">
             &copy; {year} Yunier Alvarez Portfolio
           </div>
         </div>
