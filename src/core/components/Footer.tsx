@@ -34,10 +34,31 @@ const FooterStyles = styled.div`
   }
 `;
 
-const style = css`
-  color: hotpink;
-`;
-
+const style = {
+  socialLinks: css`
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  `,
+  socialLinkBtn: css`
+    border-radius: 100%;
+    border-width: 0.2rem;
+    display: grid;
+    height: 4.5rem;
+    place-items: center;
+    width: 4.5rem;
+  `,
+  socialLinksIcons: css`
+    font-size: 2rem;
+  `,
+  copyRight: css`
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  `,
+};
 
 export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
