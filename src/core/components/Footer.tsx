@@ -38,12 +38,12 @@ const style = css`
   color: hotpink;
 `;
 
+
 export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
     <FooterStyles className="container-fluid">
-      <div css={style}>test</div>
       <div className="row text-center text-white bg-secondary bg-opacity-75">
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>Location</h2>
