@@ -75,17 +75,17 @@ export const Footer = () => {
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>On The Web</h2>
 
-          <div className="footer__social-links" css={style.socialLinks}>
+          <div css={style.socialLinks}>
             {socialLinks.map((sl, idx) => (
               <a
-                className="btn btn-outline-light footer__socialLink-btn"
+                className="btn btn-outline-light"
                 css={style.socialLinkBtn}
                 key={idx}
                 href={sl.url}
                 target="_blank"
               >
                 <i
-                  className={`footer__social-link-icon bi ${sl.icons}`}
+                  className={`bi ${sl.icons}`}
                   css={style.socialLinksIcons}
                 ></i>
               </a>
@@ -96,7 +96,7 @@ export const Footer = () => {
 
       <div className="row bg-secondary">
         <div className="col">
-          <div className="footer__copy-right text-center" css={style.copyRight}>
+          <div css={style.copyRight}>
             &copy; {year} Yunier Alvarez Portfolio
           </div>
         </div>
