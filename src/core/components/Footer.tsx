@@ -64,7 +64,7 @@ export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <FooterStyles className="container-fluid">
+    <div className="container-fluid">
       <div className="row text-center text-white bg-secondary bg-opacity-75">
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>Location</h2>
@@ -75,15 +75,19 @@ export const Footer = () => {
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>On The Web</h2>
 
-          <div className="footer__social-links">
+          <div className="footer__social-links" css={style.socialLinks}>
             {socialLinks.map((sl, idx) => (
               <a
                 className="btn btn-outline-light footer__socialLink-btn"
+                css={style.socialLinkBtn}
                 key={idx}
                 href={sl.url}
                 target="_blank"
               >
-                <i className={`footer__social-link-icon bi ${sl.icons}`}></i>
+                <i
+                  className={`footer__social-link-icon bi ${sl.icons}`}
+                  css={style.socialLinksIcons}
+                ></i>
               </a>
             ))}
           </div>
@@ -92,11 +96,11 @@ export const Footer = () => {
 
       <div className="row bg-secondary">
         <div className="col">
-          <div className="footer__copy-right text-center">
+          <div className="footer__copy-right text-center" css={style.copyRight}>
             &copy; {year} Yunier Alvarez Portfolio
           </div>
         </div>
       </div>
-    </FooterStyles>
+    </div>
   );
 };
