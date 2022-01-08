@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { useState } from 'react';
 import { socialLinks } from '../data';
 
-const FooterStyles = styled.div`
+const StyledDiv = styled.div`
   .social-links {
     column-gap: 1.5rem;
     display: flex;
@@ -35,7 +35,7 @@ export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <FooterStyles className="container-fluid">
+    <StyledDiv className="container-fluid">
       <div className="row text-center text-white bg-secondary bg-opacity-75">
         <div className="col-lg-6 col-md-12 mt-4 mb-4">
           <h2>Location</h2>
@@ -68,6 +68,12 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </FooterStyles>
+      <div className="test1 test2">test</div>
+      <style>{`
+        .test1 + .test2 {
+          background-color: red;
+        }
+      `}</style>
+    </StyledDiv>
   );
 };
