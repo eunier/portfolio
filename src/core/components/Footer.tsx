@@ -27,6 +27,7 @@ const CopyRight = styled.div`
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   text-align: center;
+  color: white;
 `;
 
 export const Footer = () => {
