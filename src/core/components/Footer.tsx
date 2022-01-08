@@ -10,13 +10,13 @@ const SocialLinks = styled.div`
   margin-top: 2rem;
 `;
 
-const SocialLinkBtn = styled.a`
-  border-radius: 100%;
-  border-width: 0.2rem;
-  display: grid;
-  height: 4.5rem;
-  place-items: center;
-  width: 4.5rem;
+const SocialLinkAnchor = styled.a`
+  border-radius: 100% !important;
+  border-width: 0.2rem !important;
+  display: grid !important;
+  height: 4.5rem !important;
+  place-items: center !important;
+  width: 4.5rem !important;
 `;
 
 const SocialLinkIcon = styled.i`
@@ -46,14 +46,32 @@ export const Footer = () => {
 
           <SocialLinks>
             {socialLinks.map((sl, idx) => (
-              <SocialLinkBtn
+              <SocialLinkAnchor
                 className="btn btn-outline-light"
                 key={idx}
                 href={sl.url}
                 target="_blank"
               >
                 <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
-              </SocialLinkBtn>
+              </SocialLinkAnchor>
+              // <a
+              //   className={`btn btn-outline-light ${css`
+              //     border-radius: 100%;
+              //     border-width: 0.2rem;
+              //     display: grid;
+              //     height: 4.5rem;
+              //     place-items: center;
+              //     width: 4.5rem;
+              //   `}`}
+              //   key={idx}
+              //   href={sl.url}
+              //   target="_blank"
+              // >
+              //   <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
+              // </a>
+              // <Test key={idx} href={sl.url} target="_blank">
+              //   <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
+              // </Test>
             ))}
           </SocialLinks>
         </div>
