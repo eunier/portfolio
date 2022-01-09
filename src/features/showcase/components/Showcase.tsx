@@ -25,6 +25,7 @@ export const Showcase = () => {
           'd-flex flex-column justify-content-center align-items-center',
           'h-100 bg-primary'
         )}
+        id="home"
       >
         <div>
           <img className="showcase__avatar rounded" src={avatar} alt="avatar" />

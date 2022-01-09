@@ -10,7 +10,7 @@ export const Portfolio = () => {
   );
 
   return (
-    <div className="container">
+    <div className="container" id="portfolio">
       <div className="row">
         <h1 className="text-center text-uppercase">Portfolio</h1>
       </div>

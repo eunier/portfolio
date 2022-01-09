@@ -2,7 +2,7 @@ import { Divider } from '../../../shared/components';
 
 export const About = (): JSX.Element => {
   return (
-    <div className="container">
+    <div className="container" id="about">
       <div className="row">
         <h1 className="text-center text-uppercase">About</h1>
       </div>
