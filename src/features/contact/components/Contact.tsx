@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init('user_elG8VitBKKHbZSABXoEWX');
-console.log(import.meta.env);
+
 export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
