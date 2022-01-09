@@ -33,6 +33,7 @@ export const Navbar = () => {
       className={classNames(
         'navbar navbar-expand-sm sticky-top navbar-dark bg-secondary'
       )}
+      id="navbar"
     >
       <div className="container-fluid">
         <button

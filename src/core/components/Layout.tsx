@@ -15,20 +15,20 @@ export const Layout = (props: LayoutProps) => {
     <>
       <Navbar />
 
-      <div
+      {/* <div
         data-bs-spy="scroll"
-        data-bs-target="#navbarNavDropdown"
-        data-bs-offset={-40}
+        data-bs-target="#navbar"
+        data-bs-offset={0}
         className="scrollspy-example"
         tabIndex={0}
-      >
+      > */}
         {Children.map(props.children, child => (
           <>
             {child}
             <Spacer />
           </>
         ))}
-      </div>
+      {/* </div> */}
 
       <Footer />
     </>

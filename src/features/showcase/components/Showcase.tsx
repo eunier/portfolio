@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import avatar from '../../../assets/avatar.png';
 import { Divider } from '../../../shared/components';
 
-const ShowcaseStyles = styled.div`
+const ShowcaseStyles = styled.section`
   height: 50rem;
 
   .showcase {
@@ -19,7 +19,7 @@ const ShowcaseStyles = styled.div`
 
 export const Showcase = () => {
   return (
-    <ShowcaseStyles>
+    <ShowcaseStyles className="test">
       <div
         className={classNames(
           'd-flex flex-column justify-content-center align-items-center',

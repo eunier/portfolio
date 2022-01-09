@@ -1,8 +1,13 @@
+import { styled } from '@linaria/react';
 import { useState } from 'react';
 import { ProjectCard, ProjectModal } from '.';
 import { Divider } from '../../../shared/components';
 import { projects } from '../data';
 import { Project } from '../models';
+
+const Title = styled.h1`
+  margin-top: 54px;
+`;
 
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | undefined>(
@@ -10,9 +15,9 @@ export const Portfolio = () => {
   );
 
   return (
-    <div className="container" id="portfolio">
+    <section className="container" id="portfolio">
       <div className="row">
-        <h1 className="text-center text-uppercase">Portfolio</h1>
+        <Title className="text-center text-uppercase">Portfolio</Title>
       </div>
 
       <div className="row d-flex justify-content-center">
@@ -46,6 +51,6 @@ export const Portfolio = () => {
         imgSrc={selectedProject?.imgSrc ?? ''}
         description={selectedProject?.description ?? ''}
       />
-    </div>
+    </section>
   );
 };
