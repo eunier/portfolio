@@ -1,13 +1,8 @@
-import { styled } from '@linaria/react';
 import { useState } from 'react';
 import { ProjectCard, ProjectModal } from '.';
 import { Divider } from '../../../shared/components';
 import { projects } from '../data';
 import { Project } from '../models';
-
-const Title = styled.h1`
-  margin-top: 54px;
-`;
 
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | undefined>(
@@ -17,7 +12,12 @@ export const Portfolio = () => {
   return (
     <section className="container" id="portfolio">
       <div className="row">
-        <Title className="text-center text-uppercase">Portfolio</Title>
+        <h1
+          className="text-center text-uppercase"
+          style={{ marginTop: '54px' }}
+        >
+          Portfolio
+        </h1>
       </div>
 
       <div className="row d-flex justify-content-center">

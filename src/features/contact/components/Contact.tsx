@@ -1,13 +1,8 @@
 import { init, send } from '@emailjs/browser';
-import { styled } from '@linaria/react';
 import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string);
-
-const Title = styled.h1`
-  margin-top: 54px;
-`;
 
 export const Contact = () => {
   const [name, setName] = useState('');
@@ -35,7 +30,12 @@ export const Contact = () => {
   return (
     <section className="container" id="contact">
       <div className="row">
-        <Title className="text-center text-uppercase">Contact Me</Title>
+        <h1
+          className="text-center text-uppercase"
+          style={{ marginTop: '54px' }}
+        >
+          Contact Me
+        </h1>
       </div>
 
       <div className="row d-flex justify-content-center">

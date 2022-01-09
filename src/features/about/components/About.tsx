@@ -1,15 +1,15 @@
-import { styled } from '@linaria/react';
 import { Divider } from '../../../shared/components';
-
-const Title = styled.h1`
-  margin-top: 54px;
-`;
 
 export const About = (): JSX.Element => {
   return (
     <section className="container" id="about">
       <div className="row">
-        <Title className="text-center text-uppercase">About</Title>
+        <h1
+          className="text-center text-uppercase"
+          style={{ marginTop: '54px' }}
+        >
+          About
+        </h1>
       </div>
 
       <div className="row d-flex justify-content-center">
