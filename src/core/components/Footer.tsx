@@ -55,24 +55,6 @@ export const Footer = () => {
               >
                 <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
               </SocialLinkAnchor>
-              // <a
-              //   className={`btn btn-outline-light ${css`
-              //     border-radius: 100%;
-              //     border-width: 0.2rem;
-              //     display: grid;
-              //     height: 4.5rem;
-              //     place-items: center;
-              //     width: 4.5rem;
-              //   `}`}
-              //   key={idx}
-              //   href={sl.url}
-              //   target="_blank"
-              // >
-              //   <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
-              // </a>
-              // <Test key={idx} href={sl.url} target="_blank">
-              //   <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon>
-              // </Test>
             ))}
           </SocialLinks>
         </div>
