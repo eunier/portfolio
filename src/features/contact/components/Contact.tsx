@@ -1,6 +1,15 @@
+import { init } from '@emailjs/browser';
+import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
+init('user_elG8VitBKKHbZSABXoEWX');
+
 export const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
+
   return (
     <div className="container">
       <div className="row">
@@ -13,15 +22,17 @@ export const Contact = () => {
 
       <form>
         <div className="mb-3">
-          <label htmlFor="firstNameInput" className="form-label">
-            First Name
+          <label htmlFor="nameInput" className="form-label">
+            Name
           </label>
 
           <input
             type="email"
             className="form-control"
-            id="firstNameInput"
+            id="nameInput"
             aria-describedby="emailHelp"
+            value={name}
+            onChange={e => setName(e.target.value)}
           />
         </div>
 
