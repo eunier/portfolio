@@ -46,6 +46,8 @@ export const Contact = () => {
             className="form-control"
             id="emailInput"
             placeholder="name@example.com"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
           />
         </div>
 
@@ -54,7 +56,13 @@ export const Contact = () => {
             Phone Number
           </label>
 
-          <input type="tel" className="form-control" id="phoneNumberInput" />
+          <input
+            type="tel"
+            className="form-control"
+            id="phoneNumberInput"
+            value={phoneNumber}
+            onChange={e => setPhoneNumber(e.target.value)}
+          />
         </div>
 
         <div className="mb-3">
@@ -62,7 +70,12 @@ export const Contact = () => {
             Message
           </label>
 
-          <textarea className="form-control" id="messageTextarea" />
+          <textarea
+            className="form-control"
+            id="messageTextarea"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+          />
         </div>
 
         <button type="submit" className="btn btn-primary">
