@@ -1,14 +1,32 @@
-import { init } from '@emailjs/browser';
-import { useState } from 'react';
+import { init, send } from '@emailjs/browser';
+import { useRef, useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init('user_elG8VitBKKHbZSABXoEWX');
-
+console.log(import.meta.env);
 export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
+  const form = useRef(null);
+
+  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    send(
+      import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
+      import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
+      {
+        name,
+        email,
+        phoneNumber,
+        message,
+      }
+    )
+      .then(console.log)
+      .catch(console.error);
+  };
 
   return (
     <div className="container">
@@ -20,7 +38,7 @@ export const Contact = () => {
         <Divider className="w-auto" />
       </div>
 
-      <form>
+      <form ref={form} onSubmit={handleOnSubmit}>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
             Name
