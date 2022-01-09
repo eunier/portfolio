@@ -1,5 +1,5 @@
 import { init, send } from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init('user_elG8VitBKKHbZSABXoEWX');
@@ -9,7 +9,6 @@ export const Contact = () => {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
-  const form = useRef(null);
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,7 +37,7 @@ export const Contact = () => {
         <Divider className="w-auto" />
       </div>
 
-      <form ref={form} onSubmit={handleOnSubmit}>
+      <form onSubmit={handleOnSubmit}>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
             Name
