@@ -6,6 +6,7 @@ export const About = (): JSX.Element => {
       <div className="row">
         <h1
           className="text-center text-uppercase"
+          // TODO remove after remove bootstrap
           style={{ marginTop: '54px' }}
         >
           About

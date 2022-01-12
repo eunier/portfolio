@@ -32,6 +32,7 @@ export const Contact = () => {
       <div className="row">
         <h1
           className="text-center text-uppercase"
+          // TODO remove after remove bootstrap
           style={{ marginTop: '54px' }}
         >
           Contact Me
