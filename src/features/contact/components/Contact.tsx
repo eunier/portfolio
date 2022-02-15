@@ -2,7 +2,7 @@ import { init, send } from '@emailjs/browser';
 import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
-init(import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string);
+init(import.meta.env.VITE_USER_ID as string);
 
 export const Contact = () => {
   const [name, setName] = useState('');
