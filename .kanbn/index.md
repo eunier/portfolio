@@ -19,6 +19,8 @@ completedColumns:
 
 ## In Progress
 
+- [contact-me](tasks/contact-me.md)
+
 ## Done
 
 - [portfolio-card](tasks/portfolio-card.md)
