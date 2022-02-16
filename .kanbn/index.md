@@ -19,10 +19,9 @@ completedColumns:
 
 ## In Progress
 
-- [contact-me](tasks/contact-me.md)
-
 ## Done
 
+- [contact-me](tasks/contact-me.md)
 - [portfolio-card](tasks/portfolio-card.md)
 - [spy-scroll](tasks/spy-scroll.md)
 - [form-validation](tasks/form-validation.md)

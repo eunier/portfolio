@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_USER_ID as string);
-
 export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -12,6 +11,25 @@ export const Contact = () => {
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // TODO how to from promise to either ?
+    // pipe(
+    //   E.tryCatch(
+    //     () =>
+    //       send(
+    //         import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
+    //         import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
+    //         {
+    //           name,
+    //           email,
+    //           phoneNumber,
+    //           message,
+    //         }
+    //       ),
+    //     E.toError
+    //   ),
+    //   E.match(console.error, console.log)
+    // );
 
     send(
       import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
