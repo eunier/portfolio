@@ -1,4 +1,6 @@
 import { init, send } from '@emailjs/browser';
+import { pipe } from 'fp-ts/lib/function';
+import * as TE from 'fp-ts/lib/TaskEither';
 import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
@@ -31,18 +33,41 @@ export const Contact = () => {
     //   E.match(console.error, console.log)
     // );
 
-    send(
-      import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
-      import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
-      {
-        name,
-        email,
-        phoneNumber,
-        message,
-      }
-    )
-      .then(console.log)
-      .catch(console.error);
+    pipe(
+      TE.tryCatch(
+        () =>
+          send(
+            import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
+            // 'a',
+            import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
+            {
+              name,
+              email,
+              phoneNumber,
+              message,
+            }
+          ),
+        // err => err
+        // TE.throwError
+        console.error
+      ),
+      TE.map(console.log)
+    )();
+
+    // fn().then(console.log).catch(console.error);
+
+    // send(
+    //   import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
+    //   import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
+    //   {
+    //     name,
+    //     email,
+    //     phoneNumber,
+    //     message,
+    //   }
+    // )
+    //   .then(console.log)
+    //   .catch(console.error);
   };
 
   return (
