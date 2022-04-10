@@ -14,31 +14,11 @@ export const Contact = () => {
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // TODO how to from promise to either ?
-    // pipe(
-    //   E.tryCatch(
-    //     () =>
-    //       send(
-    //         import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
-    //         import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
-    //         {
-    //           name,
-    //           email,
-    //           phoneNumber,
-    //           message,
-    //         }
-    //       ),
-    //     E.toError
-    //   ),
-    //   E.match(console.error, console.log)
-    // );
-
     pipe(
       TE.tryCatch(
         () =>
           send(
             import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
-            // 'a',
             import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
             {
               name,
@@ -47,27 +27,9 @@ export const Contact = () => {
               message,
             }
           ),
-        // err => err
-        // TE.throwError
         console.error
-      ),
-      TE.map(console.log)
+      )
     )();
-
-    // fn().then(console.log).catch(console.error);
-
-    // send(
-    //   import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
-    //   import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
-    //   {
-    //     name,
-    //     email,
-    //     phoneNumber,
-    //     message,
-    //   }
-    // )
-    //   .then(console.log)
-    //   .catch(console.error);
   };
 
   return (
