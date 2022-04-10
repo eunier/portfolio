@@ -14,12 +14,16 @@ export const Contact = () => {
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const {
+      env: { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE },
+    } = import.meta;
+
     pipe(
       TE.tryCatch(
         () =>
           send(
-            import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
-            import.meta.env.VITE_EMAIL_JS_TEMPLATE as string,
+            VITE_EMAIL_JS_SERVICE_ID!.toString(),
+            VITE_EMAIL_JS_TEMPLATE!.toString(),
             {
               name,
               email,
