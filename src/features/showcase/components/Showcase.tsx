@@ -14,6 +14,11 @@ const ShowcaseStyles = styled.section`
     &__name {
       font-size: 4rem;
     }
+
+    &__description {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   }
 `;
 
@@ -37,7 +42,11 @@ export const Showcase = () => {
 
         <Divider />
 
-        <h3>Software Developer</h3>
+        <h3 className="showcase__description">
+          Software developer graduated with a strong foundation in
+          object-oriented and functional programming and great attention to
+          detail, experienced in working with a team and alone.
+        </h3>
       </div>
     </ShowcaseStyles>
   );
