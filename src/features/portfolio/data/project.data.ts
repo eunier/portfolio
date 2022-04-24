@@ -1,4 +1,3 @@
-import avatarImage from '../../../assets/avatar.png';
 import devopsDashboardImage from '../../../assets/devops-dashboard.png';
 import randomPasswordGeneratorImage from '../../../assets/random-password-generator.png';
 import socialNetworkImage from '../../../assets/social-network.jpg';
@@ -38,28 +37,28 @@ export const projects: Project[] = [
     description: 'description here',
     url: 'https://github.com/eunier/weather-app',
   },
-  {
-    backgroundColor: 'bg-warning',
-    icon: 'bi-tools',
-    imgSrc: '',
-    title: 'Bootstrap Utilities Generator',
-    description: 'description here',
-    url: 'https://github.com/eunier/eunier-workspace/tree/npm/libs/bs-utils',
-  },
-  {
-    backgroundColor: 'bg-info',
-    icon: 'bi-graph-up',
-    imgSrc: avatarImage,
-    title: 'avatar',
-    description: 'description here',
-    url: 'https://github.com/eunier/todo',
-  },
-  {
-    backgroundColor: 'bg-primary',
-    icon: 'bi-graph-up',
-    imgSrc: avatarImage,
-    title: 'avatar',
-    description: 'description here',
-    url: 'https://github.com/eunier/video-request',
-  },
+  // {
+  //   backgroundColor: 'bg-warning',
+  //   icon: 'bi-tools',
+  //   imgSrc: '',
+  //   title: 'Bootstrap Utilities Generator',
+  //   description: 'description here',
+  //   url: 'https://github.com/eunier/eunier-workspace/tree/npm/libs/bs-utils',
+  // },
+  // {
+  //   backgroundColor: 'bg-info',
+  //   icon: 'bi-graph-up',
+  //   imgSrc: avatarImage,
+  //   title: 'avatar',
+  //   description: 'description here',
+  //   url: 'https://github.com/eunier/todo',
+  // },
+  // {
+  //   backgroundColor: 'bg-primary',
+  //   icon: 'bi-graph-up',
+  //   imgSrc: avatarImage,
+  //   title: 'avatar',
+  //   description: 'description here',
+  //   url: 'https://github.com/eunier/video-request',
+  // },
 ];
