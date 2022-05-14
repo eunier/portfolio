@@ -1,4 +1,4 @@
-import devopsDashboardImage from '../../../assets/devops-dashboard.png';
+import devopsDashboard from '../../../assets/devops-dashboard-demo.gif';
 import randomPasswordGeneratorImage from '../../../assets/random-password-generator.png';
 import socialNetworkImage from '../../../assets/social-network.jpg';
 import weatherAppImage from '../../../assets/weather-app.png';
@@ -8,15 +8,16 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-primary',
     icon: 'bi-graph-up',
-    imgSrc: devopsDashboardImage,
+    mediaSrc: devopsDashboard,
     title: 'Devops Dashboard',
-    description: 'React.js and Socket.io full stack app',
+    description:
+      "This is a React.js and Socket.io full-stack app. Backend generates random live data representing the status, memory, and CPU usage of applications. The front-end's state is managed with redux.",
     sourceCodeUrl: 'https://github.com/eunier/devop-dashboard',
   },
   {
     backgroundColor: 'bg-secondary',
     icon: 'bi-diagram-3',
-    imgSrc: socialNetworkImage,
+    mediaSrc: socialNetworkImage,
     title: 'Social Network',
     description: 'description here',
     deployedUrl: 'https://fathomless-taiga-68796.herokuapp.com/',
@@ -25,7 +26,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-success',
     icon: 'bi-key',
-    imgSrc: randomPasswordGeneratorImage,
+    mediaSrc: randomPasswordGeneratorImage,
     title: 'Random Password Generator',
     description: 'description here',
     deployedUrl: 'https://random-password-generator-ya.herokuapp.com/',
@@ -34,7 +35,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-danger',
     icon: 'bi-cloud-sun',
-    imgSrc: weatherAppImage,
+    mediaSrc: weatherAppImage,
     title: 'Weather App',
     description: 'description here',
     sourceCodeUrl: 'https://github.com/eunier/weather-app',
@@ -42,7 +43,7 @@ export const projects: Project[] = [
   // {
   //   backgroundColor: 'bg-warning',
   //   icon: 'bi-tools',
-  //   imgSrc: '',
+  //   mediaSrc: '',
   //   title: 'Bootstrap Utilities Generator',
   //   description: 'description here',
   //   url: 'https://github.com/eunier/eunier-workspace/tree/npm/libs/bs-utils',
@@ -50,7 +51,7 @@ export const projects: Project[] = [
   // {
   //   backgroundColor: 'bg-info',
   //   icon: 'bi-graph-up',
-  //   imgSrc: avatarImage,
+  //   mediaSrc: avatarImage,
   //   title: 'avatar',
   //   description: 'description here',
   //   url: 'https://github.com/eunier/todo',
@@ -58,7 +59,7 @@ export const projects: Project[] = [
   // {
   //   backgroundColor: 'bg-primary',
   //   icon: 'bi-graph-up',
-  //   imgSrc: avatarImage,
+  //   mediaSrc: avatarImage,
   //   title: 'avatar',
   //   description: 'description here',
   //   url: 'https://github.com/eunier/video-request',

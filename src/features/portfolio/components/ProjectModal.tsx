@@ -3,7 +3,7 @@ import { Project } from '../models';
 
 export type ProjectModalProps = Pick<
   Project,
-  'title' | 'imgSrc' | 'description' | 'deployedUrl' | 'sourceCodeUrl'
+  'title' | 'mediaSrc' | 'description' | 'deployedUrl' | 'sourceCodeUrl'
 >;
 
 export const ProjectModal = (props: ProjectModalProps) => {
@@ -34,9 +34,9 @@ export const ProjectModal = (props: ProjectModalProps) => {
           </div>
 
           <div className="modal-body text-center">
-            {props.imgSrc && (
+            {props.mediaSrc && (
               <img
-                src={props.imgSrc}
+                src={props.mediaSrc}
                 className="img-fluid"
                 alt="Project preview"
               ></img>

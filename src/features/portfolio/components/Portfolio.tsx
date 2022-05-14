@@ -49,7 +49,7 @@ export const Portfolio = () => {
 
       <ProjectModal
         title={selectedProject?.title ?? ''}
-        imgSrc={selectedProject?.imgSrc ?? ''}
+        mediaSrc={selectedProject?.mediaSrc ?? ''}
         description={selectedProject?.description ?? ''}
         deployedUrl={selectedProject?.deployedUrl ?? ''}
         sourceCodeUrl={selectedProject?.sourceCodeUrl ?? ''}
