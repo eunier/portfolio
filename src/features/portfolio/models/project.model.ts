@@ -1,6 +1,6 @@
 export interface Project {
   title: string;
-  url: string;
+  deployedUrl: string;
   imgSrc: string;
   description: string;
   icon: string;

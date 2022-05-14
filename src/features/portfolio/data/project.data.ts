@@ -11,7 +11,7 @@ export const projects: Project[] = [
     imgSrc: devopsDashboardImage,
     title: 'Devops Dashboard',
     description: 'React.js and Socket.io full stack app',
-    url: 'https://github.com/eunier/devop-dashboard',
+    deployedUrl: 'https://github.com/eunier/devop-dashboard',
   },
   {
     backgroundColor: 'bg-secondary',
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     imgSrc: socialNetworkImage,
     title: 'Social Network',
     description: 'description here',
-    url: 'https://fathomless-taiga-68796.herokuapp.com/',
+    deployedUrl: 'https://fathomless-taiga-68796.herokuapp.com/',
   },
   {
     backgroundColor: 'bg-success',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     imgSrc: randomPasswordGeneratorImage,
     title: 'Random Password Generator',
     description: 'description here',
-    url: 'https://random-password-generator-ya.herokuapp.com/',
+    deployedUrl: 'https://random-password-generator-ya.herokuapp.com/',
   },
   {
     backgroundColor: 'bg-danger',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     imgSrc: weatherAppImage,
     title: 'Weather App',
     description: 'description here',
-    url: 'https://github.com/eunier/weather-app',
+    deployedUrl: 'https://github.com/eunier/weather-app',
   },
   // {
   //   backgroundColor: 'bg-warning',

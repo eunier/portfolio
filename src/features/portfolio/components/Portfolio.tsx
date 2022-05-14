@@ -51,6 +51,7 @@ export const Portfolio = () => {
         title={selectedProject?.title ?? ''}
         imgSrc={selectedProject?.imgSrc ?? ''}
         description={selectedProject?.description ?? ''}
+        deployedUrl={selectedProject?.deployedUrl ?? ''}
       />
     </section>
   );
