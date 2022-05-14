@@ -19,7 +19,8 @@ export const projects: Project[] = [
     icon: 'bi-diagram-3',
     mediaSrc: socialNetworkImage,
     title: 'Social Network',
-    description: 'description here',
+    description:
+      'A social network for developers. Technologies and libraries: React.js, Express, MongoDB. Redux. This full-stack app allows the sign-up and sign-in of a new account and the creation of a profile listing all your educational and work history. And will enable the creation of discussions between other users.',
     deployedUrl: 'https://fathomless-taiga-68796.herokuapp.com/',
     sourceCodeUrl: 'https://github.com/eunier/dev-connector',
   },
