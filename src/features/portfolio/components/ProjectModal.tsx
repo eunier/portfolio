@@ -3,7 +3,7 @@ import { Project } from '../models';
 
 export type ProjectModalProps = Pick<
   Project,
-  'title' | 'imgSrc' | 'description' | 'deployedUrl'
+  'title' | 'imgSrc' | 'description' | 'deployedUrl' | 'sourceCodeUrl'
 >;
 
 export const ProjectModal = (props: ProjectModalProps) => {
@@ -44,15 +44,29 @@ export const ProjectModal = (props: ProjectModalProps) => {
 
             <p>{props.description}</p>
 
-            {props.deployedUrl && (
-              <a
-                className="link-primary"
-                href={props.deployedUrl}
-                target="_blank"
-              >
-                Go to Source Code
-              </a>
-            )}
+            <p>
+              {props.deployedUrl && (
+                <a
+                  className="link-primary"
+                  href={props.deployedUrl}
+                  target="_blank"
+                >
+                  Go to Site
+                </a>
+              )}
+            </p>
+
+            <p>
+              {props.sourceCodeUrl && (
+                <a
+                  className="link-primary"
+                  href={props.sourceCodeUrl}
+                  target="_blank"
+                >
+                  Go to Source Code
+                </a>
+              )}
+            </p>
           </div>
 
           <div
