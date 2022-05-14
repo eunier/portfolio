@@ -3,7 +3,7 @@ import { Project } from '../models';
 
 export type ProjectModalProps = Pick<
   Project,
-  'title' | 'imgSrc' | 'description' | 'url'
+  'title' | 'imgSrc' | 'description' | 'deployedUrl'
 >;
 
 export const ProjectModal = (props: ProjectModalProps) => {
