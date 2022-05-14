@@ -29,7 +29,8 @@ export const projects: Project[] = [
     icon: 'bi-key',
     mediaSrc: randomPasswordGeneratorImage,
     title: 'Random Password Generator',
-    description: 'description here',
+    description:
+      'It allows the generation of random passwords based on different parameters, password length, lowercase, uppercase, numbers, and symbols.',
     deployedUrl: 'https://random-password-generator-ya.herokuapp.com/',
     sourceCodeUrl: 'https://github.com/eunier/random-password-generator',
   },
