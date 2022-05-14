@@ -1,14 +1,14 @@
-import devConnector from '../../../assets/dev-connector.png';
-import devopsDashboard from '../../../assets/devops-dashboard-demo.gif';
-import randomPasswordGeneratorImage from '../../../assets/random-password-generator.png';
-import weatherAppImage from '../../../assets/weather-app.png';
+import devConnectorMedia from '../../../assets/dev-connector.png';
+import devopsDashboardMedia from '../../../assets/devops-dashboard-demo.gif';
+import randomPasswordGeneratorMedia from '../../../assets/random-password-generator.png';
+import weatherAppMedia from '../../../assets/weather-app.gif';
 import { Project } from '../models';
 
 export const projects: Project[] = [
   {
     backgroundColor: 'bg-primary',
     icon: 'bi-graph-up',
-    mediaSrc: devopsDashboard,
+    mediaSrc: devopsDashboardMedia,
     title: 'Devops Dashboard',
     description:
       "This is a React.js and Socket.io full-stack app. Backend generates random live data representing the status, memory, and CPU usage of applications. The front-end's state is managed with redux.",
@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-secondary',
     icon: 'bi-diagram-3',
-    mediaSrc: devConnector,
+    mediaSrc: devConnectorMedia,
     title: 'Social Network',
     description:
       'A social network for developers. Technologies and libraries: React.js, Express, MongoDB. Redux. This full-stack app allows the sign-up and sign-in of a new account and the creation of a profile listing all your educational and work history. And will enable the creation of discussions between other users.',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-success',
     icon: 'bi-key',
-    mediaSrc: randomPasswordGeneratorImage,
+    mediaSrc: randomPasswordGeneratorMedia,
     title: 'Random Password Generator',
     description:
       'It allows the generation of random passwords based on different parameters, password length, lowercase, uppercase, numbers, and symbols.',
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-danger',
     icon: 'bi-cloud-sun',
-    mediaSrc: weatherAppImage,
+    mediaSrc: weatherAppMedia,
     title: 'Weather App',
     description: 'description here',
     sourceCodeUrl: 'https://github.com/eunier/weather-app',
