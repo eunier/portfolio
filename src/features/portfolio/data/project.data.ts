@@ -1,6 +1,6 @@
+import devConnector from '../../../assets/dev-connector.png';
 import devopsDashboard from '../../../assets/devops-dashboard-demo.gif';
 import randomPasswordGeneratorImage from '../../../assets/random-password-generator.png';
-import socialNetworkImage from '../../../assets/social-network.jpg';
 import weatherAppImage from '../../../assets/weather-app.png';
 import { Project } from '../models';
 
@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     backgroundColor: 'bg-secondary',
     icon: 'bi-diagram-3',
-    mediaSrc: socialNetworkImage,
+    mediaSrc: devConnector,
     title: 'Social Network',
     description:
       'A social network for developers. Technologies and libraries: React.js, Express, MongoDB. Redux. This full-stack app allows the sign-up and sign-in of a new account and the creation of a profile listing all your educational and work history. And will enable the creation of discussions between other users.',
