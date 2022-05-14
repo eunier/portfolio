@@ -39,7 +39,8 @@ export const projects: Project[] = [
     icon: 'bi-cloud-sun',
     mediaSrc: weatherAppMedia,
     title: 'Weather App',
-    description: 'description here',
+    description:
+      'This command app receives an address, search it with Google Geolocation api, and returns the current weather using the Dark Sky api.',
     sourceCodeUrl: 'https://github.com/eunier/weather-app',
   },
   // {
