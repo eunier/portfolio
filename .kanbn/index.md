@@ -19,10 +19,9 @@ completedColumns:
 
 ## In Progress
 
-- [form-valid](tasks/form-valid.md)
-
 ## Done
 
+- [form-valid](tasks/form-valid.md)
 - [toast](tasks/toast.md)
 - [prooject-real-data](tasks/prooject-real-data.md)
 - [contact-me](tasks/contact-me.md)

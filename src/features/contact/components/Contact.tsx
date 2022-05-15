@@ -1,17 +1,29 @@
 import { init, send } from '@emailjs/browser';
 import { pipe } from 'fp-ts/lib/function';
 import * as TE from 'fp-ts/lib/TaskEither';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_USER_ID as string);
 
+// const schema = Joi.object({
+//   name: Joi.string().required(),
+//   email: Joi.string().email(),
+//   // phoneNumber: Joi.string().length(10).pa
+// });
+
 export const Contact = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [valid, setValid] = useState(false);
+
+  useEffect(() => {
+    const validVal = !!name && !!email && !!message;
+    setValid(validVal);
+  }, [name, email, message]);
 
   const handleOnSubmit = (e: React.FormEvent<Element>) => {
     e.preventDefault();
@@ -20,29 +32,30 @@ export const Contact = () => {
       env: { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE },
     } = import.meta;
 
-    pipe(
-      TE.tryCatch(
-        () =>
-          toast.promise(
-            send(
-              VITE_EMAIL_JS_SERVICE_ID!.toString(),
-              VITE_EMAIL_JS_TEMPLATE!.toString(),
+    valid &&
+      pipe(
+        TE.tryCatch(
+          () =>
+            toast.promise(
+              send(
+                VITE_EMAIL_JS_SERVICE_ID!.toString(),
+                VITE_EMAIL_JS_TEMPLATE!.toString(),
+                {
+                  name,
+                  email,
+                  phoneNumber,
+                  message,
+                }
+              ),
               {
-                name,
-                email,
-                phoneNumber,
-                message,
+                loading: 'Submitting...',
+                success: 'Message sent successfully!',
+                error: 'Something went wrong!',
               }
             ),
-            {
-              loading: 'Submitting...',
-              success: 'Message sent successfully!',
-              error: 'Something went wrong!',
-            }
-          ),
-        console.error
-      )
-    )();
+          console.error
+        )
+      )();
   };
 
   return (
@@ -56,11 +69,9 @@ export const Contact = () => {
           Contact Me
         </h1>
       </div>
-
       <div className="row d-flex justify-content-center">
         <Divider className="w-auto" />
       </div>
-
       <form onSubmit={handleOnSubmit}>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
@@ -74,6 +85,7 @@ export const Contact = () => {
             aria-describedby="emailHelp"
             value={name}
             onChange={e => setName(e.target.value)}
+            required
           />
         </div>
 
@@ -89,6 +101,7 @@ export const Contact = () => {
             placeholder="name@example.com"
             value={email}
             onChange={e => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -116,10 +129,11 @@ export const Contact = () => {
             id="messageTextarea"
             value={message}
             onChange={e => setMessage(e.target.value)}
+            required
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" disabled={!valid}>
           Submit
         </button>
       </form>
