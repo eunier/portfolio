@@ -19,10 +19,11 @@ completedColumns:
 
 ## In Progress
 
-- [prooject-real-data](tasks/prooject-real-data.md)
+- [toast](tasks/toast.md)
 
 ## Done
 
+- [prooject-real-data](tasks/prooject-real-data.md)
 - [contact-me](tasks/contact-me.md)
 - [portfolio-card](tasks/portfolio-card.md)
 - [spy-scroll](tasks/spy-scroll.md)
