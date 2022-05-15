@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 import { Children, ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
 import { Footer, Navbar } from '.';
 
 export type LayoutProps = {
@@ -13,6 +14,7 @@ const Spacer = styled.div`
 export const Layout = (props: LayoutProps) => {
   return (
     <>
+      <Toaster position="top-right" />
       <Navbar />
 
       {/* <div
@@ -22,12 +24,12 @@ export const Layout = (props: LayoutProps) => {
         className="scrollspy-example"
         tabIndex={0}
       > */}
-        {Children.map(props.children, child => (
-          <>
-            {child}
-            <Spacer />
-          </>
-        ))}
+      {Children.map(props.children, child => (
+        <>
+          {child}
+          <Spacer />
+        </>
+      ))}
       {/* </div> */}
 
       <Footer />

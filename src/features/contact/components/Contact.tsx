@@ -2,9 +2,11 @@ import { init, send } from '@emailjs/browser';
 import { pipe } from 'fp-ts/lib/function';
 import * as TE from 'fp-ts/lib/TaskEither';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_USER_ID as string);
+
 export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -21,14 +23,21 @@ export const Contact = () => {
     pipe(
       TE.tryCatch(
         () =>
-          send(
-            VITE_EMAIL_JS_SERVICE_ID!.toString(),
-            VITE_EMAIL_JS_TEMPLATE!.toString(),
+          toast.promise(
+            send(
+              VITE_EMAIL_JS_SERVICE_ID!.toString(),
+              VITE_EMAIL_JS_TEMPLATE!.toString(),
+              {
+                name,
+                email,
+                phoneNumber,
+                message,
+              }
+            ),
             {
-              name,
-              email,
-              phoneNumber,
-              message,
+              loading: 'Submitting...',
+              success: 'Message sent successfully!',
+              error: 'Something went wrong!',
             }
           ),
         console.error
