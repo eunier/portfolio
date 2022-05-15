@@ -1,11 +1,15 @@
 import { styled } from '@linaria/react';
 import { Toast } from 'bootstrap';
-import { Children, ReactNode, useRef } from 'react';
+import { Children, ReactNode, useRef, useState } from 'react';
 import { Footer, Navbar } from '.';
+
+export type LayoutPropsRenderProps = {
+  showToast: (msg: string) => void;
+};
 
 export type LayoutProps = {
   children?: ReactNode;
-  render: (obj: { showToast: (msg: string) => void }) => ReactNode;
+  render: (props: LayoutPropsRenderProps) => ReactNode;
 };
 
 const Spacer = styled.div`
@@ -14,17 +18,16 @@ const Spacer = styled.div`
 
 export const Layout = (props: LayoutProps) => {
   const submitToastEl = useRef<HTMLDivElement>(null);
+  const [toastMst, setToastMst] = useState('');
 
   const showToast = (msg: string) => {
+    setToastMst(msg);
+
     if (submitToastEl.current) {
       const toast = new Toast(submitToastEl.current);
       toast.show();
     }
   };
-
-  const test = props.render({ showToast });
-
-  // console.log(test);
 
   return (
     <>
@@ -37,13 +40,6 @@ export const Layout = (props: LayoutProps) => {
         className="scrollspy-example"
         tabIndex={0}
       > */}
-      {/* {Children.map(props.children, child => (
-        <>
-          {child}
-          <Spacer />
-        </>
-      ))} */}
-      {/* {props.render({ showToast })} */}
 
       {Children.map(props.render({ showToast }), child => (
         <>
@@ -51,8 +47,6 @@ export const Layout = (props: LayoutProps) => {
           <Spacer />
         </>
       ))}
-
-      {/* </div> */}
 
       <Footer />
 
@@ -75,7 +69,7 @@ export const Layout = (props: LayoutProps) => {
             aria-label="Close"
           />
         </div>
-        <div className="toast-body">Hello, world! This is a toast message.</div>
+        <div className="toast-body">{toastMst}</div>
       </div>
     </>
   );

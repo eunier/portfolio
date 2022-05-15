@@ -7,12 +7,12 @@ import { Showcase } from './features/showcase/components';
 const App = (): JSX.Element => {
   return (
     <Layout
-      render={({ showToast }) => (
+      render={props => (
         <>
           <Showcase />
           <Portfolio />
           <About />
-          <Contact />
+          <Contact showToast={props.showToast} />
         </>
       )}
     />

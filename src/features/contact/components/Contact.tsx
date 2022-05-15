@@ -2,10 +2,14 @@ import { init, send } from '@emailjs/browser';
 import { pipe } from 'fp-ts/lib/function';
 import * as TE from 'fp-ts/lib/TaskEither';
 import { useState } from 'react';
+import { LayoutPropsRenderProps } from '../../../core/components';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_USER_ID as string);
-export const Contact = () => {
+
+export type ContactProps = Pick<LayoutPropsRenderProps, 'showToast'>;
+
+export const Contact = (props: ContactProps) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
@@ -34,6 +38,8 @@ export const Contact = () => {
         console.error
       )
     )();
+
+    props.showToast('test');
   };
 
   return (
