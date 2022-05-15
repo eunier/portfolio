@@ -17,14 +17,13 @@ completedColumns:
 
 ## Todo
 
-- [form-valid](tasks/form-valid.md)
-
 ## In Progress
 
-- [toast](tasks/toast.md)
+- [form-valid](tasks/form-valid.md)
 
 ## Done
 
+- [toast](tasks/toast.md)
 - [prooject-real-data](tasks/prooject-real-data.md)
 - [contact-me](tasks/contact-me.md)
 - [portfolio-card](tasks/portfolio-card.md)
