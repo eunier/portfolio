@@ -1,8 +1,7 @@
 import { init, send } from '@emailjs/browser';
-import { Toast } from 'bootstrap';
 import { pipe } from 'fp-ts/lib/function';
 import * as TE from 'fp-ts/lib/TaskEither';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Divider } from '../../../shared/components';
 
 init(import.meta.env.VITE_USER_ID as string);
@@ -11,15 +10,9 @@ export const Contact = () => {
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const submitToastEl = useRef<HTMLDivElement>(null);
 
   const handleOnSubmit = (e: React.FormEvent<Element>) => {
     e.preventDefault();
-
-    if (submitToastEl.current) {
-      const toast = new Toast(submitToastEl.current);
-      toast.show();
-    }
 
     const {
       env: { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE },
@@ -121,28 +114,6 @@ export const Contact = () => {
           Submit
         </button>
       </form>
-
-      <div
-        id="submitToast"
-        className="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-        ref={submitToastEl}
-      >
-        <div className="toast-header">
-          <img src="..." className="rounded me-2" alt="..." />
-          <strong className="me-auto">Bootstrap</strong>
-          <small>11 mins ago</small>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          />
-        </div>
-        <div className="toast-body">Hello, world! This is a toast message.</div>
-      </div>
     </section>
   );
 };

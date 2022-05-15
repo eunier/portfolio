@@ -6,12 +6,16 @@ import { Showcase } from './features/showcase/components';
 
 const App = (): JSX.Element => {
   return (
-    <Layout>
-      <Showcase />
-      <Portfolio />
-      <About />
-      <Contact />
-    </Layout>
+    <Layout
+      render={({ showToast }) => (
+        <>
+          <Showcase />
+          <Portfolio />
+          <About />
+          <Contact />
+        </>
+      )}
+    />
   );
 };
 
