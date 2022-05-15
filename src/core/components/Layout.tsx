@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
-import { Children, ReactNode } from 'react';
+import { Toast } from 'bootstrap';
+import { Children, ReactNode, useRef, useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Footer, Navbar } from '.';
 
@@ -12,6 +13,18 @@ const Spacer = styled.div`
 `;
 
 export const Layout = (props: LayoutProps) => {
+  const submitToastEl = useRef<HTMLDivElement>(null);
+  const [toastMst, setToastMst] = useState('');
+
+  const showToast = (msg: string) => {
+    setToastMst(msg);
+
+    if (submitToastEl.current) {
+      const toast = new Toast(submitToastEl.current);
+      toast.show();
+    }
+  };
+
   return (
     <>
       <Toaster position="top-right" />
@@ -33,6 +46,28 @@ export const Layout = (props: LayoutProps) => {
       {/* </div> */}
 
       <Footer />
+
+      {/* <div
+        id="submitToast"
+        className="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        ref={submitToastEl}
+      >
+        <div className="toast-header">
+          <img src="..." className="rounded me-2" alt="..." />
+          <strong className="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          />
+        </div>
+        <div className="toast-body">{toastMst}</div>
+      </div> */}
     </>
   );
 };

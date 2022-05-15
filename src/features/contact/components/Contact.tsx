@@ -8,12 +8,12 @@ import { Divider } from '../../../shared/components';
 init(import.meta.env.VITE_USER_ID as string);
 
 export const Contact = () => {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
-  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleOnSubmit = (e: React.FormEvent<Element>) => {
     e.preventDefault();
 
     const {
