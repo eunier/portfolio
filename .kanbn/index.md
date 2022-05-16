@@ -9,10 +9,6 @@ completedColumns:
 
 ## Backlog
 
-- [project-modal-gif](tasks/project-modal-gif.md)
-- [theme](tasks/theme.md)
-- [about-real-data](tasks/about-real-data.md)
-- [dark-mode-toggle](tasks/dark-mode-toggle.md)
 - [show-case-background-effect](tasks/show-case-background-effect.md)
 
 ## Todo
@@ -21,6 +17,8 @@ completedColumns:
 
 ## Done
 
+- [about-real-data](tasks/about-real-data.md)
+- [project-modal-gif](tasks/project-modal-gif.md)
 - [form-valid](tasks/form-valid.md)
 - [toast](tasks/toast.md)
 - [prooject-real-data](tasks/prooject-real-data.md)
