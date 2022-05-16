@@ -10,6 +10,7 @@ completedColumns:
 ## Backlog
 
 - [show-case-background-effect](tasks/show-case-background-effect.md)
+- [clean-up-imports](tasks/clean-up-imports.md)
 
 ## Todo
 
