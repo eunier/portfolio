@@ -4,14 +4,9 @@ import * as TE from 'fp-ts/lib/TaskEither';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Divider } from '../../../shared/components';
+import { EMAIL_REGEX, PHONE_NUMBER_REGEX } from '../../../shared/constants';
 
 init(import.meta.env.VITE_USER_ID as string);
-
-// const schema = Joi.object({
-//   name: Joi.string().required(),
-//   email: Joi.string().email(),
-//   // phoneNumber: Joi.string().length(10).pa
-// });
 
 export const Contact = () => {
   const [name, setName] = useState('');
@@ -21,41 +16,43 @@ export const Contact = () => {
   const [valid, setValid] = useState(false);
 
   useEffect(() => {
-    const validVal = !!name && !!email && !!message;
+    const validVal =
+      !!name &&
+      !!email &&
+      !!message &&
+      !!RegExp(EMAIL_REGEX).exec(email)?.length &&
+      !!RegExp(PHONE_NUMBER_REGEX).exec(phoneNumber)?.length;
+
     setValid(validVal);
   }, [name, email, message]);
 
   const handleOnSubmit = (e: React.FormEvent<Element>) => {
     e.preventDefault();
 
+    if (!valid) return;
+
     const {
       env: { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE },
     } = import.meta;
 
-    valid &&
-      pipe(
-        TE.tryCatch(
-          () =>
-            toast.promise(
-              send(
-                VITE_EMAIL_JS_SERVICE_ID!.toString(),
-                VITE_EMAIL_JS_TEMPLATE!.toString(),
-                {
-                  name,
-                  email,
-                  phoneNumber,
-                  message,
-                }
-              ),
-              {
-                loading: 'Submitting...',
-                success: 'Message sent successfully!',
-                error: 'Something went wrong!',
-              }
+    pipe(
+      TE.tryCatch(
+        () =>
+          toast.promise(
+            send(
+              VITE_EMAIL_JS_SERVICE_ID!.toString(),
+              VITE_EMAIL_JS_TEMPLATE!.toString(),
+              { name, email, phoneNumber, message }
             ),
-          console.error
-        )
-      )();
+            {
+              loading: 'Submitting...',
+              success: 'Message sent successfully!',
+              error: 'Something went wrong!',
+            }
+          ),
+        console.error
+      )
+    )();
   };
 
   return (
