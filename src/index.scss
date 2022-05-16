@@ -1,4 +1,11 @@
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$primary: #c48e2b;
+
+$theme-colors: (
+  'primary': $primary,
+);
 
 body {
   position: relative;
