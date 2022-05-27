@@ -10,7 +10,6 @@ completedColumns:
 ## Backlog
 
 - [show-case-background-effect](tasks/show-case-background-effect.md)
-- [clean-up-imports](tasks/clean-up-imports.md)
 
 ## Todo
 
@@ -18,6 +17,7 @@ completedColumns:
 
 ## Done
 
+- [clean-up-imports](tasks/clean-up-imports.md)
 - [about-real-data](tasks/about-real-data.md)
 - [project-modal-gif](tasks/project-modal-gif.md)
 - [form-valid](tasks/form-valid.md)
