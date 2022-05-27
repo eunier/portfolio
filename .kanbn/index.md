@@ -15,6 +15,8 @@ completedColumns:
 
 ## In Progress
 
+- [colors](tasks/colors.md)
+
 ## Done
 
 - [clean-up-imports](tasks/clean-up-imports.md)
