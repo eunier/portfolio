@@ -31,9 +31,8 @@ export const Contact = () => {
 
     if (!valid) return;
 
-    const {
-      env: { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE },
-    } = import.meta;
+    const { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE } = import.meta
+      .env;
 
     pipe(
       TE.tryCatch(
