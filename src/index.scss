@@ -1,25 +1,5 @@
-// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap/scss/functions';
 
 $primary: #c48e2b;
 
-$theme-colors: (
-  'primary': $primary,
-);
-
-body {
-  position: relative;
-}
-
-// section:before {
-//   height: 54px;
-//   content: '';
-//   display: block;
-// }
-
-// section .test:before {
-//   height: 54px;
-//   content: '';
-//   display: block;
-//   background-color: #0d6e;
-// }
+@import '../node_modules/bootstrap/scss/bootstrap';
