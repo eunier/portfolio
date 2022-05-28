@@ -15,10 +15,10 @@ const navLinkNames: NavLink[] = [
     name: 'portfolio',
     icon: 'bi-briefcase',
   },
-  {
-    name: 'about',
-    icon: 'bi-file-person',
-  },
+  // {
+  //   name: 'about',
+  //   icon: 'bi-file-person',
+  // },
   {
     name: 'contact',
     icon: 'bi-envelope',
