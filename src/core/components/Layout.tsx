@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
-import { Toast } from 'bootstrap';
-import { Children, ReactNode, useRef, useState } from 'react';
+import { Children, ReactNode, useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Footer, Navbar } from '.';
 
@@ -14,16 +13,6 @@ const Spacer = styled.div`
 
 export const Layout = (props: LayoutProps) => {
   const submitToastEl = useRef<HTMLDivElement>(null);
-  const [toastMst, setToastMst] = useState('');
-
-  const showToast = (msg: string) => {
-    setToastMst(msg);
-
-    if (submitToastEl.current) {
-      const toast = new Toast(submitToastEl.current);
-      toast.show();
-    }
-  };
 
   return (
     <>
