@@ -15,7 +15,7 @@ export const projects: Project[] = [
     sourceCodeUrl: 'https://github.com/eunier/devop-dashboard',
   },
   {
-    backgroundColor: 'bg-secondary',
+    backgroundColor: 'bg-info',
     icon: 'bi-diagram-3',
     mediaSrc: devConnectorMedia,
     title: 'Social Network',
