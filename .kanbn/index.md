@@ -15,10 +15,11 @@ completedColumns:
 
 ## In Progress
 
-- [colors](tasks/colors.md)
+- [deploy](tasks/deploy.md)
 
 ## Done
 
+- [colors](tasks/colors.md)
 - [clean-up-imports](tasks/clean-up-imports.md)
 - [about-real-data](tasks/about-real-data.md)
 - [project-modal-gif](tasks/project-modal-gif.md)
