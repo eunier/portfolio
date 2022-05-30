@@ -1,7 +1,10 @@
 import { styled } from '@linaria/react';
 import classNames from 'classnames';
-import avatar from '../../../assets/avatar.png';
 import { Divider } from '../../../shared/components';
+
+const { VITE_ASSETS_URL } = import.meta.env as ImportMetaEnv & {
+  VITE_ASSETS_URL: string;
+};
 
 const ShowcaseStyles = styled.section`
   height: 50rem;
@@ -33,7 +36,11 @@ export const Showcase = () => {
         id="home"
       >
         <div>
-          <img className="showcase__avatar rounded" src={avatar} alt="avatar" />
+          <img
+            className="showcase__avatar rounded"
+            src={`${VITE_ASSETS_URL}/avatar.png`}
+            alt="avatar"
+          />
         </div>
 
         <h1 className="showcase__name fw-bold text-uppercase">
