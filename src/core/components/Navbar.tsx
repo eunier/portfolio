@@ -64,7 +64,10 @@ export const Navbar = () => {
                   onClick={() => setActiveNavLinkIdx(idx)}
                   aria-current={idx === activeNavLinkIdx ? 'page' : undefined}
                 >
-                  <img src={el.icon}></img>
+                  <img
+                    style={{ marginRight: '0.5rem', height: '1.5rem' }}
+                    src={el.icon}
+                  ></img>
                   {el.name}
                 </a>
               </li>
