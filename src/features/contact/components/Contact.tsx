@@ -32,15 +32,18 @@ export const Contact = () => {
     if (!valid) return;
 
     const { VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE } = import.meta
-      .env;
+      .env as ImportMetaEnv & {
+      VITE_EMAIL_JS_SERVICE_ID: string;
+      VITE_EMAIL_JS_TEMPLATE: string;
+    };
 
     pipe(
       TE.tryCatch(
         () =>
           toast.promise(
             send(
-              VITE_EMAIL_JS_SERVICE_ID!.toString(),
-              VITE_EMAIL_JS_TEMPLATE!.toString(),
+              VITE_EMAIL_JS_SERVICE_ID.toString(),
+              VITE_EMAIL_JS_TEMPLATE.toString(),
               { name, email, phoneNumber, message }
             ),
             {
