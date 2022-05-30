@@ -9,7 +9,7 @@ export type ProjectCardProps = Pick<Project, 'icon' | 'title'> & {
 const ProjectCardStyles = styled.div`
   .project-card {
     &__icon {
-      font-size: 8rem;
+      height: 8rem;
     }
 
     &__title-wrapper {
@@ -27,7 +27,10 @@ const ProjectCardStyles = styled.div`
 export const ProjectCard = (props: ProjectCardProps) => (
   <ProjectCardStyles className={classNames('card', props.className)}>
     <div className="card-img-top d-flex justify-content-center">
-      <i className={classNames('bi', props.icon, 'project-card__icon')}></i>
+      <img
+        className="project-card__icon"
+        src={`data:image/svg+xml;utf8,${props.icon}`}
+      />
     </div>
 
     <div className="card-body">
