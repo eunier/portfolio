@@ -16,6 +16,7 @@ const ShowcaseStyles = styled.section`
 
     &__name {
       font-size: 4rem;
+      text-align: center;
     }
 
     &__description {
