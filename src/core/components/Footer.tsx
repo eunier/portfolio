@@ -53,7 +53,6 @@ export const Footer = () => {
                 href={sl.url}
                 target="_blank"
               >
-                {/* <SocialLinkIcon className={`bi ${sl.icons}`}></SocialLinkIcon> */}
                 <SocialLinkIcon
                   key={idx}
                   src={`data:image/svg+xml;utf8,${sl.icons}`}
