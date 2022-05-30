@@ -10,6 +10,8 @@ const ProjectCardStyles = styled.div`
   .project-card {
     &__icon {
       height: 8rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
 
     &__title-wrapper {
