@@ -10,7 +10,6 @@ function App() {
 
 	return (
 		<>
-			<Navbar />
 			<Footer />
 			{/* <div>
 				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
