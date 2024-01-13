@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import { socialLinks } from "../navbar/data/social-links";
+import { socialLinks } from "../data/social-links";
 // import { createSignal } from "solid-js";
 
 // const SocialLinks = styled.div`

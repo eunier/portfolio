@@ -1,8 +1,8 @@
 // import { createSignal } from "solid-js";
 // import viteLogo from "/vite.svg";
 import "./app.scss";
-import { Footer } from "./core/components/footer/footer";
-import { Navbar } from "./core/components/navbar/navbar";
+import { Footer } from "./core/components/footer";
+import { Navbar } from "./core/components/navbar";
 // import solidLogo from "./assets/solid.svg";
 
 function App() {
