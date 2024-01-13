@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-    "check": "biome check --apply src/"
+    "fmt": "biome check --apply src/"
 	},
 	"dependencies": {
 		"solid-js": "^1.8.7"
