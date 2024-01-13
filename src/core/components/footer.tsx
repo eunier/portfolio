@@ -57,12 +57,12 @@ export const Footer = () => {
 						{socialLinks.map((sl) => (
 							<a
 								style={{
-									"border-radius": "100% !important",
-									"border-width": "0.2rem !important",
-									display: "grid !important",
-									height: "4.5rem !important",
-									"place-items": "center !important",
-									width: "4.5rem !important",
+									"border-radius": "100%",
+									"border-width": "0.2rem",
+									display: "grid",
+									height: "3rem",
+									"place-items": "center",
+									width: "3rem",
 								}}
 								class="btn btn-outline-light"
 								href={sl.url}
@@ -87,7 +87,16 @@ export const Footer = () => {
 
 			<div class="row bg-secondary">
 				<div class="col">
-					<div>&copy; {year()} Yunier Alvarez Portfolio</div>
+					<div
+						style={{
+							"margin-bottom": "0.5rem",
+							"margin-top": "0.5rem",
+							"text-align": "center",
+							color: "white",
+						}}
+					>
+						&copy; {year()} Yunier Alvarez Portfolio
+					</div>
 					<p>footer here</p>
 				</div>
 			</div>
