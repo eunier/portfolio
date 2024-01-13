@@ -1,4 +1,5 @@
-import { socialLinks } from "../../data";
+import { createSignal } from "solid-js";
+import { socialLinks } from "../navbar/data/social-links";
 // import { createSignal } from "solid-js";
 
 // const SocialLinks = styled.div`
@@ -30,7 +31,7 @@ import { socialLinks } from "../../data";
 // `;
 
 export const Footer = () => {
-	// const [year] = createSignal(new Date().getFullYear());
+	const [year] = createSignal(new Date().getFullYear());
 
 	return (
 		<div class="container-fluid">
@@ -86,7 +87,7 @@ export const Footer = () => {
 
 			<div class="row bg-secondary">
 				<div class="col">
-					{/* <CopyRight>&copy; {year()} Yunier Alvarez Portfolio</CopyRight> */}
+					<div>&copy; {year()} Yunier Alvarez Portfolio</div>
 					<p>footer here</p>
 				</div>
 			</div>

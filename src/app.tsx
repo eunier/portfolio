@@ -1,8 +1,9 @@
 // import { createSignal } from "solid-js";
 // import viteLogo from "/vite.svg";
-import "./app.component.scss";
+import "./app.scss";
+import { Footer } from "./core/components/footer/footer";
+import { Navbar } from "./core/components/navbar/navbar";
 // import solidLogo from "./assets/solid.svg";
-import { Footer, Navbar } from "./core/components";
 
 function App() {
 	// const [count, setCount] = createSignal(0);
