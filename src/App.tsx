@@ -1,16 +1,17 @@
-import { createSignal } from "solid-js";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import solidLogo from "./assets/solid.svg";
-import { Footer } from "./core/components";
+// import { createSignal } from "solid-js";
+// import viteLogo from "/vite.svg";
+import "./App.scss";
+// import solidLogo from "./assets/solid.svg";
+import { Footer, Navbar } from "./core/components";
 
 function App() {
-	const [count, setCount] = createSignal(0);
+	// const [count, setCount] = createSignal(0);
 
 	return (
 		<>
+			<Navbar />
 			<Footer />
-			<div>
+			{/* <div>
 				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
 					<img src={viteLogo} class="logo" alt="Vite logo" />
 				</a>
@@ -34,7 +35,7 @@ function App() {
 			</div>
 			<p class="read-the-docs">
 				Click on the Vite and Solid logos to learn more
-			</p>
+			</p> */}
 		</>
 	);
 }

@@ -1,5 +1,5 @@
-import { socialLinks } from "../data";
-import { createSignal } from "solid-js";
+// import { socialLinks } from "../data";
+// import { createSignal } from "solid-js";
 
 // const SocialLinks = styled.div`
 //   column-gap: 1.5rem;
@@ -30,7 +30,7 @@ import { createSignal } from "solid-js";
 // `;
 
 export const Footer = () => {
-	const [year] = createSignal(new Date().getFullYear());
+	// const [year] = createSignal(new Date().getFullYear());
 
 	return (
 		<div class="container-fluid">

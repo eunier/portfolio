@@ -54,7 +54,7 @@ export const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav nav-pills text-uppercase fw-bold">
-            {navLinkNames.map((el, idx) => (
+            {/* {navLinkNames.map((el, idx) => (
               <li key={idx} className="nav-item">
                 <a
                   className={classNames('nav-link mx-1 px-2', {
@@ -71,7 +71,7 @@ export const Navbar = () => {
                   {el.name}
                 </a>
               </li>
-            ))}
+            ))} */}
           </ul>
 
           <hr className="d-md-none text-white-50" />

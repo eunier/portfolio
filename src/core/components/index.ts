@@ -1,1 +1,2 @@
-export * from "./Footer";
+export * from "./footer.component";
+export * from "./navbar.component";
