@@ -1,4 +1,4 @@
-// import { socialLinks } from "../data";
+import { socialLinks } from "../../data";
 // import { createSignal } from "solid-js";
 
 // const SocialLinks = styled.div`
@@ -41,25 +41,47 @@ export const Footer = () => {
 					<p>Miami-Fort Lauderdale Area, USA, Florida</p>
 				</div>
 
-				{/* <div class="col-lg-6 col-md-12 mt-4 mb-4">
+				<div class="col-lg-6 col-md-12 mt-4 mb-4">
 					<h2>On The Web</h2>
 
-					<SocialLinks>
-						{socialLinks.map((sl, idx) => (
-							<SocialLinkAnchor
+					<div
+						style={{
+							"column-gap": "1.5rem;",
+							display: "flex",
+							"justify-content": "center",
+							"margin-bottom": "2rem",
+							"margin-top": "2rem",
+						}}
+					>
+						{socialLinks.map((sl) => (
+							<a
+								style={{
+									"border-radius": "100% !important",
+									"border-width": "0.2rem !important",
+									display: "grid !important",
+									height: "4.5rem !important",
+									"place-items": "center !important",
+									width: "4.5rem !important",
+								}}
 								class="btn btn-outline-light"
-								key={idx}
 								href={sl.url}
 								target="_blank"
+								rel="noreferrer"
 							>
-								<SocialLinkIcon
-									key={idx}
+								<img
+									style={{
+										"margin-bottom": "0.5rem",
+										"margin-top": "0.5rem",
+										"text-align": "center",
+										color: "white",
+									}}
 									src={`data:image/svg+xml;utf8,${sl.icons}`}
+									alt="social link"
 								/>
-							</SocialLinkAnchor>
+							</a>
 						))}
-					</SocialLinks>
-				</div> */}
+					</div>
+				</div>
 			</div>
 
 			<div class="row bg-secondary">

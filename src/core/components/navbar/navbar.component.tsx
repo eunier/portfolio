@@ -1,7 +1,7 @@
 import { For, createSignal } from "solid-js";
-import homeIcon from "../../assets/home.svg";
-import briefcaseIcon from "../../assets/briefcase.svg";
-import envelopeIcon from "../../assets/envelope.svg";
+import homeIcon from "../../../assets/home.svg";
+import briefcaseIcon from "../../../assets/briefcase.svg";
+import envelopeIcon from "../../../assets/envelope.svg";
 
 type NavLink = {
 	name: string;
