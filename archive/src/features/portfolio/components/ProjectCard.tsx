@@ -1,9 +1,9 @@
-import { styled } from '@linaria/react';
-import classNames from 'classnames';
-import { Project } from '../models';
+import { styled } from "@linaria/react";
+import classNames from "classnames";
+import { Project } from "../models";
 
-export type ProjectCardProps = Pick<Project, 'icon' | 'title'> & {
-  className?: string;
+export type ProjectCardProps = Pick<Project, "icon" | "title"> & {
+	className?: string;
 };
 
 const ProjectCardStyles = styled.div`
@@ -27,18 +27,19 @@ const ProjectCardStyles = styled.div`
 `;
 
 export const ProjectCard = (props: ProjectCardProps) => (
-  <ProjectCardStyles className={classNames('card', props.className)}>
-    <div className="card-img-top d-flex justify-content-center">
-      <img
-        className="project-card__icon"
-        src={`data:image/svg+xml;utf8,${props.icon}`}
-      />
-    </div>
+	<ProjectCardStyles className={classNames("card", props.className)}>
+		<div className="card-img-top d-flex justify-content-center">
+			{/* biome-ignore lint/a11y/useAltText: <explanation> */}
+			<img
+				className="project-card__icon"
+				src={`data:image/svg+xml;utf8,${props.icon}`}
+			/>
+		</div>
 
-    <div className="card-body">
-      <h5 className="card-title project-card__title-wrapper">
-        <div className="project-card__title">{props.title}</div>
-      </h5>
-    </div>
-  </ProjectCardStyles>
+		<div className="card-body">
+			<h5 className="card-title project-card__title-wrapper">
+				<div className="project-card__title">{props.title}</div>
+			</h5>
+		</div>
+	</ProjectCardStyles>
 );
